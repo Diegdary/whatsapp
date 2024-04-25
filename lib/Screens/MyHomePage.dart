@@ -46,9 +46,24 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(
           widget.title,
-          style: TextStyle(color: Color(0xFF00FF55)),
+          style: TextStyle(color: Color(0xFF2d9962)),
         ),
         backgroundColor: Color(0xFFFFFFFFF),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.camera_alt_outlined),
+            color: Color(0xFF000000),
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search),
+              color: Color(0xFF000000)),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.more_vert),
+              color: Color(0xFF000000))
+        ],
       ),
       body: Container(
         width: double.infinity,
@@ -245,7 +260,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {},
         tooltip: 'Increment',
         child: const Icon(Icons.message_rounded),
-        backgroundColor: Color(0xFF00FF55),
+        backgroundColor: Color(0xFF2d9962),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

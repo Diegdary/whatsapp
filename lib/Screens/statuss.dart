@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 class statusme extends StatelessWidget {
   statusme({super.key});
   final List<status> estados = [
@@ -111,13 +111,19 @@ class statusme extends StatelessWidget {
             onTap: () {
               print('Pepe el herizo');
             },
-            child: const Padding(
+            child:  Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
+                      
+                     Container(
+                      width: 45,
+                      height: 45,
+                      child: Image.asset('assets/samuel1-01.png')
+                      ),
                       Icon(Icons.add_circle, color: Colors.green),
                       SizedBox(width: 8),
                       Text(
@@ -126,17 +132,23 @@ class statusme extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
+                        
                       ),
+                      // ignore: unnecessary_const
+                     
                     ],
                   ),
                   SizedBox(height: 4),
                   Row(
                     children: [
                       SizedBox(width: 32),
-                      Text(
-                        'Add an update',
-                        style: TextStyle(
-                          color: Colors.grey,
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+                        child: Text(
+                          'Add an update',
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
                         ),
                       ),
                     ],

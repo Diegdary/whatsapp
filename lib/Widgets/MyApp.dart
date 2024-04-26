@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       //home: const Settings(),
       // const Community(),
       // const statusme(),
-      home:   const MyHomePage(title:'Whatsapp'),
+      home: const Home(),
     );
   }
 }

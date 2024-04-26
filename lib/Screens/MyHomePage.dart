@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/Screens/Home.dart';
 import 'package:whatsapp/Screens/Settings.dart';
 
 import 'chat.dart';
@@ -200,13 +201,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: 'Increment',
         child: const Icon(Icons.message_rounded),
         backgroundColor: Color(0xFF2d9962),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

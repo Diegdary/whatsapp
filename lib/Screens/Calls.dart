@@ -24,10 +24,18 @@ class Calls extends StatelessWidget {
               onPressed: () {},
               icon: Icon(Icons.search),
               color: Color(0xFF000000)),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-              color: Color(0xFF000000))
+          PopupMenuButton(
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem(
+                value: 1,
+                child: Text("Clear call log"),
+              ),
+              const PopupMenuItem(
+                value: 1,
+                child: Text("Settings"),
+              )
+            ],
+          )
         ],
       ),
       body: Center(

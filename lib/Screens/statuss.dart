@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 class statusme extends StatelessWidget {
   statusme({super.key});
   final List<status> estados = [
@@ -98,10 +98,14 @@ class statusme extends StatelessWidget {
               onPressed: () {},
               icon: Icon(Icons.search),
               color: Color(0xFF000000)),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-              color: Color(0xFF000000))
+          PopupMenuButton(
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem(
+                value: 1,
+                child: Text("Settings"),
+              )
+            ],
+          )
         ],
       ),
       body: Column(
@@ -111,19 +115,17 @@ class statusme extends StatelessWidget {
             onTap: () {
               print('Pepe el herizo');
             },
-            child:  Padding(
+            child: Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
-                      
-                     Container(
-                      width: 45,
-                      height: 45,
-                      child: Image.asset('assets/samuel1-01.png')
-                      ),
+                      Container(
+                          width: 45,
+                          height: 45,
+                          child: Image.asset('assets/samuel1-01.png')),
                       Icon(Icons.add_circle, color: Colors.green),
                       SizedBox(width: 8),
                       Text(
@@ -132,10 +134,8 @@ class statusme extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
-                        
                       ),
                       // ignore: unnecessary_const
-                     
                     ],
                   ),
                   SizedBox(height: 4),

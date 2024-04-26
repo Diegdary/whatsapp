@@ -25,10 +25,14 @@ class Community extends StatelessWidget {
             icon: Icon(Icons.camera_alt_outlined),
             color: Color(0xFF000000),
           ),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-              color: Color(0xFF000000))
+          PopupMenuButton(
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem(
+                value: 1,
+                child: Text("Settings"),
+              )
+            ],
+          )
         ],
       ),
       body: ListView(
@@ -109,7 +113,6 @@ class Community extends StatelessWidget {
             ),
             title: Text('Flutter Community 3 (ayuda)'),
             onTap: () {},
-            
           ),
           Container(
             height: 5,
@@ -183,9 +186,9 @@ class Community extends StatelessWidget {
                 ),
                 Divider(),
                 Container(
-            height: 10,
-            color: Color.fromARGB(255, 247, 245, 245),
-          ),
+                  height: 10,
+                  color: Color.fromARGB(255, 247, 245, 245),
+                ),
               ],
             ),
           )

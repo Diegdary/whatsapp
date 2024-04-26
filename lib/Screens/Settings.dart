@@ -17,7 +17,11 @@ class Settings extends StatelessWidget {
               fontSize: 25),
         ),
         backgroundColor: Color(0xFFFFFFFFF),
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back)),
         actions: [
           IconButton(
               onPressed: () {},
@@ -195,11 +199,11 @@ class Settings extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    child: Text("From Meta",style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 10
-            
-                    ),),
+                    child: Text(
+                      "From Meta",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                    ),
                   ),
                   Container(
                     width: 40,

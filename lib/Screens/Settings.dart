@@ -56,7 +56,7 @@ class Settings extends StatelessWidget {
                     ),
                     Container(
                       child: Text(
-                        "Soy el come piZZa ",
+                        "Estado",
                         style: TextStyle(
                             color: Colors.grey,
                             fontWeight: FontWeight.normal,

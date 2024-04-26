@@ -100,7 +100,7 @@ class statusme extends StatelessWidget {
       imagen: 'assets/umberto.jpg'
       
     ),
-    
+    //estados estados estados
     
   ];
 

@@ -89,9 +89,9 @@ class Settings extends StatelessWidget {
           Divider(color: Colors.grey[300]),
           ListTile(
             leading: Icon(Icons.vpn_key),
-            title: Text('Cuenta'),
+            title: Text('Account'),
             subtitle: Text(
-              'Notificaciones de seguridad, cambiar de número',
+              'Security notifications, change number',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -101,9 +101,9 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.lock),
-            title: Text('Cuenta'),
+            title: Text('Privacy'),
             subtitle: Text(
-              'Bloquear contactos, mensajes temporales',
+              'Block contacts, disappearing messages',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -115,7 +115,7 @@ class Settings extends StatelessWidget {
             leading: Icon(Icons.face),
             title: Text('Avatar'),
             subtitle: Text(
-              'Crear, editar, administrar foto de perfil',
+              'Creat, edit profile photo',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -127,7 +127,7 @@ class Settings extends StatelessWidget {
             leading: Icon(Icons.message),
             title: Text('Chats'),
             subtitle: Text(
-              'Tema, fondos de pantalla, historial de chat',
+              'Themes, wallpapers, chat history',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -137,9 +137,9 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.notifications),
-            title: Text('Notificaciones'),
+            title: Text('Notifications'),
             subtitle: Text(
-              'Tono de mensajes, grupos y llamadas',
+              'Message, group & call tones',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -149,9 +149,9 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.data_usage),
-            title: Text('Almacenamiento y datos'),
+            title: Text('Storage and data'),
             subtitle: Text(
-              'Uso de red, descarga automática',
+              'Network usage,auto-download',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -161,9 +161,9 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.language),
-            title: Text('Idioma de la aplicación'),
+            title: Text('App language'),
             subtitle: Text(
-              'Español (idioma del dispositivo)',
+              'English(device s language)',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -173,9 +173,9 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.help),
-            title: Text('Ayuda'),
+            title: Text('Help'),
             subtitle: Text(
-              'Centro de ayuda, contáctanos, política de privacidad',
+              'No one s coming to help you',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -185,7 +185,7 @@ class Settings extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person_add),
-            title: Text('Invitar amigos'),
+            title: Text('Invite a friend'),
             onTap: () {},
           ),
           Padding(

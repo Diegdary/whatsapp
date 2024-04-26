@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/Screens/Communities.dart';
 import 'package:whatsapp/Screens/Settings.dart';
 
 import '../Screens/MyHomePage.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       ),
       // const MyHomePage(title:'Whatsapp')
       //home: const Settings(),
-      home: const MyHomePage(title:'Whatsapp'),
+      // const Community(),
+      home: const Community(),
     );
   }
 }

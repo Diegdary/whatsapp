@@ -59,10 +59,29 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {},
               icon: Icon(Icons.search),
               color: Color(0xFF000000)),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-              color: Color(0xFF000000))
+          PopupMenuButton(
+              itemBuilder: (BuildContext context) => [
+                    const PopupMenuItem(
+                      value: 1,
+                      child: Text("New group"),
+                    ),
+                    const PopupMenuItem(
+                      value: 2,
+                      child: Text("New broadcast"),
+                    ),
+                    const PopupMenuItem(
+                      value: 3,
+                      child: Text("Linked devices"),
+                    ),
+                    const PopupMenuItem(
+                      value: 4,
+                      child: Text("Starred messages"),
+                    ),
+                    const PopupMenuItem(
+                      value: 5,
+                      child: Text("Settings"),
+                    )
+                  ])
         ],
       ),
       body: Container(

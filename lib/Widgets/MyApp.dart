@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Settings(),
+      // const MyHomePage(title:'Whatsapp')
+      //home: const Settings(),
+      home: const MyHomePage(title:'Whatsapp'),
     );
   }
 }

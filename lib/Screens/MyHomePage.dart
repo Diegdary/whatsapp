@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/Screens/Settings.dart';
+
+import 'chat.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -60,28 +63,39 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.search),
               color: Color(0xFF000000)),
           PopupMenuButton(
-              itemBuilder: (BuildContext context) => [
-                    const PopupMenuItem(
-                      value: 1,
-                      child: Text("New group"),
-                    ),
-                    const PopupMenuItem(
-                      value: 2,
-                      child: Text("New broadcast"),
-                    ),
-                    const PopupMenuItem(
-                      value: 3,
-                      child: Text("Linked devices"),
-                    ),
-                    const PopupMenuItem(
-                      value: 4,
-                      child: Text("Starred messages"),
-                    ),
-                    const PopupMenuItem(
-                      value: 5,
-                      child: Text("Settings"),
-                    )
-                  ])
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem(
+                value: 1,
+                child: Text("New group"),
+              ),
+              const PopupMenuItem(
+                value: 2,
+                child: Text("New broadcast"),
+              ),
+              const PopupMenuItem(
+                value: 3,
+                child: Text("Linked devices"),
+              ),
+              const PopupMenuItem(
+                value: 4,
+                child: Text("Starred messages"),
+              ),
+              const PopupMenuItem(
+                value: 5,
+                child: Text("Settings"),
+              )
+            ],
+            onSelected: (value) {
+              switch (value) {
+                case 5:
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const Settings())));
+                  break;
+              }
+            },
+          )
         ],
       ),
       body: Container(
@@ -112,164 +126,76 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             /////chat
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 10.0),
-                      child: Image(
-                        image: AssetImage('assets/samuel1-01.png'),
-                        width: 55.0,
-                      ),
-                    ),
-                    Container(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Column(
+            Column(
+              children: List.generate(
+                  6,
+                  (index) => GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChatScreen()),
+                          );
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-                              child: Text(
-                                "Muppet69",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                                  child: Image(
+                                    image: AssetImage('assets/samuel1-01.png'),
+                                    width: 55.0,
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                                        child: Text(
+                                          "Muppet69",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Icon(
+                                              Icons.done,
+                                              color: Color.fromARGB(
+                                                  255, 0, 199, 173),
+                                              size: 20.0,
+                                            ),
+                                            Text("Hola!!"),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                             Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                              child: Column(
                                 children: [
-                                  Icon(
-                                    Icons.done,
-                                    color: Color.fromARGB(255, 0, 199, 173),
-                                    size: 20.0,
+                                  Text(
+                                    "7:49 PM",
+                                    style: TextStyle(color: Colors.grey),
                                   ),
-                                  Text("Hola!!"),
+                                  Text("")
                                 ],
                               ),
                             )
                           ],
-                        )),
-                  ],
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Text(
-                        "7:49 PM",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text("")
-                    ],
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 10.0),
-                      child: Image(
-                        image: AssetImage('assets/samuel1-01.png'),
-                        width: 55.0,
-                      ),
-                    ),
-                    Container(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-                              child: Text(
-                                "Muppet69",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.done,
-                                    color: Color.fromARGB(255, 0, 199, 173),
-                                    size: 20.0,
-                                  ),
-                                  Text("Hola!!"),
-                                ],
-                              ),
-                            )
-                          ],
-                        )),
-                  ],
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Text(
-                        "7:49 PM",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text("")
-                    ],
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 10.0),
-                      child: Image(
-                        image: AssetImage('assets/samuel1-01.png'),
-                        width: 55.0,
-                      ),
-                    ),
-                    Container(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-                              child: Text(
-                                "Muppet69",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.done,
-                                    color: Color.fromARGB(255, 0, 199, 173),
-                                    size: 20.0,
-                                  ),
-                                  Text("Hola!!"),
-                                ],
-                              ),
-                            )
-                          ],
-                        )),
-                  ],
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Text(
-                        "7:49 PM",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text("")
-                    ],
-                  ),
-                )
-              ],
+                        ),
+                      )),
             ),
           ],
         ),

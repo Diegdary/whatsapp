@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import '../Screens/MyHomePage.dart';
+
 class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: const Color.fromARGB(255, 0, 0, 0)),
+          icon:
+              Icon(Icons.arrow_back, color: const Color.fromARGB(255, 0, 0, 0)),
           onPressed: () {
             // Reemplaza la pantalla actual por MyHomePage
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => MyHomePage(title: 'Título')),
-            );
+            Navigator.pop(context);
           },
         ),
         title: Row(
           children: <Widget>[
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/samuel1-01.png')
-              ),
+            CircleAvatar(backgroundImage: AssetImage('assets/samuel1-01.png')),
             SizedBox(width: 10.0),
             Text('Muppet69'),
           ],
@@ -27,18 +24,15 @@ class ChatScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.videocam),
-            onPressed: () {
-            },
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.call),
-            onPressed: () {
-            },
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.more_vert),
-            onPressed: () {
-            },
+            onPressed: () {},
           ),
         ],
         backgroundColor: Colors.white,
@@ -46,26 +40,26 @@ class ChatScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           color: Color.fromARGB(255, 133, 179, 179),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: ListView(
-                children: <Widget>[
-                  ChatBubble(
-                    texto: "Hola, ¿cómo puedo ayudarte?",
-                    esSoporte: true,
-                  ),
-                  ChatBubble(
-                    texto: "Ayuda perdí todo mi dinero",
-                    esSoporte: false,
-                  ),
-                ],
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: ListView(
+                  children: <Widget>[
+                    ChatBubble(
+                      texto: "Hola, ¿cómo puedo ayudarte?",
+                      esSoporte: true,
+                    ),
+                    ChatBubble(
+                      texto: "Ayuda perdí todo mi dinero",
+                      esSoporte: false,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            ChatInputField(),
-          ],
+              ChatInputField(),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
@@ -93,13 +87,13 @@ class ChatBubble extends StatelessWidget {
                   bottomRight: Radius.circular(10.0),
                   topRight: Radius.circular(10.0),
                 )
-                : BorderRadius.only(
+              : BorderRadius.only(
                   topLeft: Radius.circular(10.0),
                   bottomLeft: Radius.circular(10.0),
                   bottomRight: Radius.circular(10.0),
                   topRight: Radius.circular(10.0),
                 ),
-        boxShadow: [
+          boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
@@ -115,7 +109,6 @@ class ChatBubble extends StatelessWidget {
       ),
     );
   }
-
 }
 
 class ChatInputField extends StatelessWidget {
@@ -127,48 +120,42 @@ class ChatInputField extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            
             child: TextField(
-              
               decoration: InputDecoration(
-                
-                hintText: ' Mensaje',hintStyle: TextStyle(color: Colors.grey[600]),
+                hintText: ' Mensaje',
+                hintStyle: TextStyle(color: Colors.grey[600]),
                 prefixIcon: Icon(Icons.emoji_emotions_outlined),
                 suffixIcon: Row(
-                  mainAxisSize: MainAxisSize.min, 
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     IconButton(
-                      icon: Icon(Icons.attach_file), 
-                      onPressed: () {
-                      },
+                      icon: Icon(Icons.attach_file),
+                      onPressed: () {},
                     ),
                     IconButton(
-                      icon: Icon(Icons.camera_alt), 
-                      onPressed: () {
-                      },
+                      icon: Icon(Icons.camera_alt),
+                      onPressed: () {},
                     ),
                   ],
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0), 
+                  borderRadius: BorderRadius.circular(30.0),
                   borderSide: BorderSide.none,
                 ),
                 filled: true,
-                fillColor: Colors.white.withOpacity(0.9), 
+                fillColor: Colors.white.withOpacity(0.9),
               ),
             ),
           ),
-           SizedBox(width: 10),
+          SizedBox(width: 10),
           Container(
             decoration: BoxDecoration(
               color: Colors.green,
-              shape: BoxShape.circle, 
+              shape: BoxShape.circle,
             ),
             child: IconButton(
-              icon: Icon(Icons.send, color: Colors.white), 
-              onPressed: () {
-               
-              },
+              icon: Icon(Icons.send, color: Colors.white),
+              onPressed: () {},
             ),
           ),
         ],
